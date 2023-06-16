@@ -18,11 +18,12 @@ type Query {
       name: String @where(operator: "like")
     ): [User!]! @paginate(defaultCount: 10)
 
-    "List all laboratory tests."
-    labTests(type: String @where(operator: "like")): [LabTest!]! @all
-
     "List all laboratory tests grouped by type."
     labTestGroups: [LabTestGroup!]!
+}
+
+type Mutation {
+    updateMedicalRecord(patient_id: Int!, labs: LabsRecordInput!): MedicalRecord
 }
 
 type User {
@@ -41,7 +42,27 @@ type LabTest {
     description: String!
 }
 
+type MedicalRecord {
+  id: ID!
+  labs: LabsRecord
+  patient: User! @belongsTo
+}
+
+type LabsRecord {
+  xRayScan: [Int!]
+  ultrasoundScan: [Int!]
+  ctScan: String
+  mriScan: String
+}
+
 type LabTestGroup {
     type: String!
     tests: [LabTest!]!
+}
+
+input LabsRecordInput {
+  xRayScan: [Int!]
+  ultrasoundScan: [Int!]
+  ctScan: String
+  mriScan: String
 }
