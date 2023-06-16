@@ -17,25 +17,31 @@ type Query {
       "Filters by name. Accepts SQL LIKE wildcards `%` and `_`."
       name: String @where(operator: "like")
     ): [User!]! @paginate(defaultCount: 10)
+
+    "List all laboratory tests."
+    labTests(type: String @where(operator: "like")): [LabTest!]! @all
+
+    "List all laboratory tests grouped by type."
+    labTestGroups: [LabTestGroup!]!
 }
 
-"Account of a person who utilizes this application."
 type User {
-    "Unique primary key."
     id: ID!
-
-    "Non-unique name."
     name: String!
-
-    "Unique email address."
     email: String!
-
-    "When the email was verified."
     email_verified_at: DateTime
-
-    "When the account was created."
     created_at: DateTime!
-
-    "When the account was last updated."
     updated_at: DateTime!
+}
+
+type LabTest {
+    id: ID!
+    type: String!
+    name: String!
+    description: String!
+}
+
+type LabTestGroup {
+    type: String!
+    tests: [LabTest!]!
 }
