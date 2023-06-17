@@ -100,6 +100,7 @@ mutation {
     patient {
       id
       name
+      email
     }
   }
 }
