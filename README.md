@@ -41,7 +41,7 @@ http://localhost:8000/graphiql or http://127.0.0.1:8000/graphiql
 #### Remote server
 ```
 The API Endpoint:
-http://localhost:8000/graphql or http://127.0.0.1:8000/graphql
+https://laboratory-tests-graphql.fly.dev/graphql
 ```
 
 ### Making requests
