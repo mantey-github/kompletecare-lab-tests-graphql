@@ -3,7 +3,9 @@ A laravel-based backend app (API) that fetches and submits laboratory tests usin
 
 
 ### Project setup
-create a ```.env``` file with your database details
+Create a ```.env``` file with your database details.
+
+Run ```composer install``` to install app's dependencies.
 
 ### Database
 Setup database by running the command below. 
@@ -19,13 +21,22 @@ password: patient123
 ```
 
 ### Run
-Run the command and access `/graphiql` to execute queries and mutations in the graphql playground.
+Run the command and access the API endpoint at `/graphql`. 
+To execute queries and mutations with the graphql playground use `/graphiql`.
 ```
 php artisan serve
 ```
 
 ### Accessing the Endpoints Locally 
-[http://localhost:8000/graphiql](http://localhost:8000/graphiql) or [http://127.0.0.1:8000/graphiql](http://127.0.0.1:8000/graphiql)
+The API Endpoint
+```
+http://localhost:8000/graphql or http://127.0.0.1:8000/graphql
+```
+
+The Playground
+```
+http://localhost:8000/graphiql or http://127.0.0.1:8000/graphiql
+```
 
 ### Making requests
 From the graphql playground. You can make requests with the following queries and mutations below;
