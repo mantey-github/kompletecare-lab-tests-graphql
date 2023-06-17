@@ -57,7 +57,7 @@ Remember to set the Authorization Header Token. (Get the token after logging in)
 Log in user to get auth token
 ```
 mutation {
-  login(input: { email: "patient123@kompletecare.com", password: "patient123" }) {
+  login(input: { email: "daniel.mantey@example.com", password: "patient123" }) {
     token
   }
 }
