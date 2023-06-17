@@ -16,7 +16,7 @@ php artisan migrate:fresh --seed
 
 Sample credentials
 ```
-email: patient123@kompletecare.com
+email: daniel.mantey@example.com
 password: patient123
 ```
 
@@ -27,15 +27,21 @@ To execute queries and mutations with the graphql playground use `/graphiql`.
 php artisan serve
 ```
 
-### Accessing the Endpoints Locally 
-The API Endpoint
+### Accessing the Endpoints 
+#### Local server 
+On your local machine access the app with the endpoints below;
 ```
+The API Endpoint:
 http://localhost:8000/graphql or http://127.0.0.1:8000/graphql
-```
 
 The Playground
-```
 http://localhost:8000/graphiql or http://127.0.0.1:8000/graphiql
+```
+
+#### Remote server
+```
+The API Endpoint:
+http://localhost:8000/graphql or http://127.0.0.1:8000/graphql
 ```
 
 ### Making requests

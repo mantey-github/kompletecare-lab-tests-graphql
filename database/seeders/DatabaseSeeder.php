@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory()
         ->create([
-            'name' => 'James Doe',
-            'email' => 'patient123@kompletecare.com',
+            'name' => 'Daniel Mantey',
+            'email' => 'daniel.mantey@example.com',
             'password' => '$2y$10$eJ94dfNU8whTOWoagbAvyOdivFKKwA25/frixprMa1SeW13pQZuYS', //patient123
             'email_verified_at' => now(),
         ]);
